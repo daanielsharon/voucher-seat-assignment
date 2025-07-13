@@ -18,3 +18,27 @@ Content-Type: application/json
     "date": "2025-07-12",
     "aircraft": "ATR"
 }
+
+### POST /api/generate
+POST http://localhost:8080/api/generate
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "id": "123456789",
+    "flightNumber": "12345",
+    "date": "2025-07-16",
+    "aircraft": "Boeing 737 Max"
+}
+
+### POST /api/generate
+POST http://localhost:8080/api/generate
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "id": "123456789",
+    "flightNumber": "12345",
+    "date": "2025-07-18",
+    "aircraft": "Airbus 320"
+}

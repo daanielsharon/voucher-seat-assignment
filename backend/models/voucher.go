@@ -21,7 +21,7 @@ type DTOVoucherRequest struct {
 	CrewID       string `json:"id" validate:"required"`
 	FlightNumber string `json:"flightNumber" validate:"required"`
 	FlightDate   string `json:"date" validate:"required,datetime=2006-01-02"`
-	AircraftType string `json:"aircraft" validate:"required,oneof=ATR 'Airbus 320' 'Boeing 737 Max'"`
+	AircraftType string `json:"aircraft" validate:"required,aircraft"`
 }
 
 // built to return to client

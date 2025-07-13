@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"voucher-seat-assignment/models"
 	"voucher-seat-assignment/services"
 	"voucher-seat-assignment/utils"
@@ -57,6 +58,7 @@ func (v *VoucherControllerImpl) GenerateVoucher(w http.ResponseWriter, r *http.R
 
 	err := validation.Validate.Struct(req)
 	if err != nil {
+		fmt.Println("err", err)
 		utils.JSONError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
@@ -68,7 +70,7 @@ func (v *VoucherControllerImpl) GenerateVoucher(w http.ResponseWriter, r *http.R
 	}
 
 	if voucherData.Exists {
-		utils.JSONError(w, http.StatusBadRequest, "voucher already exists")
+		utils.JSONError(w, http.StatusBadRequest, "voucher already created")
 		return
 	}
 

@@ -29,6 +29,7 @@ export async function generate(payload: GeneratePayload) {
     body: JSON.stringify(payload),
   });
 
-  if (!res.ok) throw new Error("Generate failed");
-  return res.json();
+  const jsonResponse = await res.json();
+  if (!res.ok) throw new Error(jsonResponse.message);
+  return jsonResponse;
 }

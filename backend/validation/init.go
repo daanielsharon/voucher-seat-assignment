@@ -14,4 +14,7 @@ func Init() {
 		_, err := time.Parse("2006-01-02", fl.Field().String())
 		return err == nil
 	})
+	Validate.RegisterValidation("aircraft", func(fl validator.FieldLevel) bool {
+		return fl.Field().String() == "ATR" || fl.Field().String() == "Airbus 320" || fl.Field().String() == "Boeing 737 Max"
+	})
 }
