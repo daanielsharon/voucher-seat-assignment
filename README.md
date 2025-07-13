@@ -5,8 +5,22 @@ The backend is built with **Go**, and the frontend uses **React + Tailwind (Flow
 
 ## Getting Started
 
-Please make sure to give permission to execute this file
-```chmod +x dev.sh```   
+This app runs locally on:
+
+- **Frontend**: Vite will try `http://localhost:5173` by default,  
+  but it may fall back to another port (like `5174`, `5175`, etc.) if it's already in use.  
+  Check the terminal log after running the script to see the exact URL.
+
+- **Backend**: `http://localhost:8080` (default Go server)
+
+Before running the script, **grant execution permission**:
+```bash
+chmod +x dev.sh
+```   
 
 And then run it
-```./dev.sh```
+```bash
+./dev.sh
+```
+
+
